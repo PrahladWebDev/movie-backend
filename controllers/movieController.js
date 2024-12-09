@@ -66,7 +66,7 @@ const movieReview = async (req, res) => {
 
     movie.reviews.push(review);
     movie.numReviews = movie.reviews.length;
-    movie.rating =
+    movie.avgrating =
       movie.reviews.reduce((total, review) => total + review.rating, 0) / movie.numReviews;
 
     await movie.save();

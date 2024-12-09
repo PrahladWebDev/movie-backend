@@ -25,6 +25,7 @@ const movieSchema = new mongoose.Schema(
     cast: [{ type: String }],
     reviews: [reviewSchema],
     numReviews: { type: Number, required: true, default: 0 },
+    avgrating: { type: Number, default: 0 }, // Ensure this exists in the schema
     createdAt: { type: Date, default: Date.now },
   },
   { timestamps: true }
